@@ -18,7 +18,7 @@ class _PostScreenState extends State<PostScreen> {
   final  currentEmail = FirebaseAuth.instance.currentUser?.email;
   final  curentPhone = FirebaseAuth.instance.currentUser?.phoneNumber;
  // final databaseRef = FirebaseDatabase.instance.ref("Post");
- final databaseStore = FirebaseFirestore.instance.collection("user").snapshots();
+  final databaseStore = FirebaseFirestore.instance.collection("user").snapshots();
   final databaseStore1 = FirebaseFirestore.instance.collection("user");
   TextEditingController controller = TextEditingController();
 

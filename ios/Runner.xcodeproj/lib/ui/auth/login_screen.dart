@@ -176,16 +176,8 @@ class _LoginScreenState extends State<LoginScreen> {
              ),
              SizedBox(height: 20),
              InkWell(
-               onTap: ()async{
-                try{
-                  final user = await VerifyGoggle().signInWithGoogle();
-                  if(!context.mounted) return;
-                  Navigator.push(context, MaterialPageRoute(builder: (context)=>PostScreen()));
-                                } catch (e){
-                  debugPrint(e.toString());
-                  rethrow;
-                }
-
+               onTap: (){
+                 VerifyGoggle().signInWithGoogle();
                },
                child: Container(height: 50,
                  width: double.infinity,
@@ -194,6 +186,8 @@ class _LoginScreenState extends State<LoginScreen> {
                      border: Border.all(color: Colors.black)
                  ),
                  child: Center(child: Text("Login with Facebook",style: TextStyle(fontSize:20),)),
+
+
                ),
              ),
 
